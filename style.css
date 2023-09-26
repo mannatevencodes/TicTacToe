@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #01121b;
+    color: rgb(142, 223, 232);
+}
+
+.gameContainer{ 
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+.box{
+    border: 10px solid;
+    border-image: linear-gradient(#0b2a3b, #018262);
+    border-image-slice: 1;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.box:hover{
+    background: radial-gradient(#0f4562, #01121b);
+    /* border: none; */
+}
+
+.info {
+    font-size: 22px;
+}
+
+.gameInfo{
+    padding: 0 70px;
+    font-family: 'Baloo Bhaina 2', cursive;
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+
+.gameInfo h1{
+    font-size: 2.5rem;
+}
+
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+    margin-top: 20%;
+}
+
+.br-0{
+    border-right: 0;
+}
+
+.bl-0{
+    border-left: 0;
+}
+
+.bt-0{
+    border-top: 0;
+}
+
+.bb-0{
+    border-bottom: 0;
+}
+
+#reset {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-48%, -50%);
+    padding: 1px 18px;
+    background: none;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    font-family: 'Baloo Bhaina 2';
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: #fff;
+}
+
+.line{
+    height: 3px;
+    width: 0;
+    position: absolute;
+    background-color: rgb(142, 223, 232);
+    transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width: 950px)
+{
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 34px;
+    }
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+    .container { 
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+}
